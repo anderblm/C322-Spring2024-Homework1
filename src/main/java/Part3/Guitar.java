@@ -57,9 +57,9 @@ public class Guitar {
     public void writeToFile() {
         try (PrintWriter writer = new PrintWriter(new FileWriter("database.txt", true))) {
             writer.println(serialNumber + "," + price + "," + builder + "," + model + "," + type + "," + backWood + "," + topWood);
-            System.out.println("Guitar information written to database.txt successfully.");
+            System.out.println("Guitar written to database.txt.");
         } catch (IOException e) {
-            System.err.println("Error writing to the file: " + e.getMessage());
+            System.err.println("Error writing to file: " + e.getMessage());
         }
     }
 }

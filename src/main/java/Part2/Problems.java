@@ -106,7 +106,6 @@ public class Problems {
                     countSquare--;
                     break;
                 default:
-                    // Ignore other characters
                     break;
             }
         }

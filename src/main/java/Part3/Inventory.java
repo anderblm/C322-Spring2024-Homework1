@@ -25,7 +25,6 @@ public class Inventory {
 
     public Guitar search(Guitar searchGuitar) {
         for (Guitar guitar : guitars) {
-            // Assuming the search is based on all attributes
             if (guitar.getBuilder().equals(searchGuitar.getBuilder())
                     && guitar.getModel().equals(searchGuitar.getModel())
                     && guitar.getType().equals(searchGuitar.getType())
