@@ -78,6 +78,32 @@ class ProblemsTest {
 
     }
     @Test
+    public void Problem6() {
+        // Create two sorted linked lists
+        Problems.ListNode list1 = new Problems.ListNode(1);
+        list1.next = new Problems.ListNode(3);
+        list1.next.next = new Problems.ListNode(5);
+
+        Problems.ListNode list2 = new Problems.ListNode(2);
+        list2.next = new Problems.ListNode(4);
+        list2.next.next = new Problems.ListNode(6);
+
+
+        Problems problems = new Problems();
+
+
+        Problems.ListNode result = problems.problem6(list1, list2);
+
+        int[] expected = {1, 2, 3, 4, 5, 6};
+        for (int value : expected) {
+            assertNotNull(result);
+            assertEquals(value, result.place);
+            result = result.next;
+        }
+        assertNull(result);
+    }
+
+    @Test
     void problem7() {
         Problems problems = new Problems();
         int[] input1 = {1, 2, 9};

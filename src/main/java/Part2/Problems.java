@@ -2,6 +2,7 @@ package Part2;
 import java.util.Arrays;
 import java.lang.StringBuilder;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 
 public class Problems {
@@ -112,6 +113,46 @@ public class Problems {
 
         return countRound == 0 && countCurly == 0 && countSquare == 0;
     }
+
+        //create Linkedlist 3
+        // loop? list1 and list2 into list 3
+        // sort list 3
+        // return list 3
+        // make class to pull from 
+        // splice together both lists
+        static class ListNode {
+            int place;
+            ListNode next;
+            ListNode(int p) {
+                this.place = p;
+            }
+        }
+
+    public ListNode problem6(ListNode list1, ListNode list2) {
+        ListNode nodes = new ListNode(0);
+        ListNode current = nodes;
+
+        while (list1 != null && list2 != null) {
+            if (list1.place < list2.place) {
+                current.next = list1;
+                list1 = list1.next;
+            } else {
+                current.next = list2;
+                list2 = list2.next;
+                }
+                current = current.next;
+            }
+
+            if (list1 != null) {
+                current.next = list1;
+            } else {
+                current.next = list2;
+            }
+
+            return nodes.next;
+        }
+
+
 
     public int[] problem7(int[] num) {
         int plus = num.length - 1;
