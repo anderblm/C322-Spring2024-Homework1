@@ -35,7 +35,7 @@
                 <configuration>
                     <includes>
                         <include>
-                            edu.iu.anderblm.ProblemsTest
+                            edu.iu.anderblm.Part2.ProblemsTest
                         </include>
                     </includes>
                     <excludes>
